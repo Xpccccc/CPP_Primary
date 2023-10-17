@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//C++自动识别变量的类型
 int main() {
     int a;
     double b;
