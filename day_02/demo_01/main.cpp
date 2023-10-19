@@ -50,24 +50,94 @@ using namespace std;
 //    return 0;
 //}
 
-int main() {
-    //权限不能放大
-    const int a = 10;
-    //int &b = a;
-    const int &b = a;
-    const int &c = b;
+//int main() {
+//    //权限不能放大
+//    const int a = 10;
+//    //int &b = a;
+//    const int &b = a;
+//    const int &c = b;
+//
+//    //权限可以缩小
+//    int d = 20;
+//    const int &e = d;
+//
+//    //可以给常数取别名
+//    const int &f = 10;
+//
+//    int i = 1;
+//    double j = i;
+//    //double &rj = i;
+//    const double &rj = i;//i先int提升为double，提升后会有一个常变量记录这个提升后的i（i的原始值不变）,所以必须使用常量来引用
+//
+//    return 0;
+//}
 
-    //权限可以缩小
-    int d = 20;
-    const int &e = d;
+//void Swap(int &a, int &b) {
+//    int tmp = a;
+//    a = b;
+//    b = tmp;
+//}
+//
+//
+//int main() {
+//    int a = 1, b = 3;
+//    cout << a << " " << b << endl;
+//
+//    Swap(a, b);
+//    cout << a << " " << b << endl;
+//    return 0;
+//}
 
-    //可以给常数取别名
-    const int &f = 10;
+//int &Add(int a, int b) {
+//    static int c = a + b;//只初始化一次
+//    return c;
+//}
+//
+//
+//int main() {
+//    int &ret = Add(1, 2);
+//    cout << ret << endl;
+//
+//    Add(4, 5);
+//    cout << ret << endl;
+//    return 0;
+//}
 
-    int i = 1;
-    double j = i;
-    //double &rj = i;
-    const double &rj = i;//i先int提升为double，提升后会有一个常变量记录这个提升后的i（i的原始值不变）,所以必须使用常量来引用
+//#include <time.h>
+//struct A{ int a[10000]; };
+//A a;
+//// 值返回
+//A TestFunc1() { return a;}
+//// 引用返回
+//A& TestFunc2(){ return a;}
+//void TestReturnByRefOrValue()
+//{
+//    // 以值作为函数的返回值类型
+//    size_t begin1 = clock();
+//    for (size_t i = 0; i < 100000; ++i)
+//        TestFunc1();
+//    size_t end1 = clock();
+//    // 以引用作为函数的返回值类型
+//    size_t begin2 = clock();
+//    for (size_t i = 0; i < 100000; ++i)
+//        TestFunc2();
+//    size_t end2 = clock();
+//    // 计算两个函数运算完成之后的时间
+//    cout << "TestFunc1 time:" << end1 - begin1 << endl;
+//    cout << "TestFunc2 time:" << end2 - begin2 << endl;
+//}
+//
+//int main(){
+//    TestReturnByRefOrValue();//传引用效率更高
+//    return 0;
+//}
 
+int main()
+{
+    int a = 10;
+    int& ra = a;
+    ra = 20;
+    int* pa = &a;
+    *pa = 20;
     return 0;
 }
