@@ -12,7 +12,7 @@ public:
 //        _day = day;
 //    }
 
-
+    //void Print(const Date* this)
     void Print() {
         cout << _year << "-" << _month << "-" << _day << endl;
     }
