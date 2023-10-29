@@ -25,7 +25,7 @@ void Test() {
     man.showInfo();
 }
 
-//类的实例化
+//类的实例化(对象)
 int main() {
     Test();
     return 0;
