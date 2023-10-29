@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
@@ -21,13 +21,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ade551ca-54bc-4204-ab63-80766f3ea253" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/../../day_01/demo_02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_01/demo_02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day_01/demo_02/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_01/demo_02/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../day_01/demo_03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../day_01/demo_03/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo_01/Date.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_01/Date.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo_01/Date.h" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_01/Date.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo_01/Stack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_01/Stack.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo_01/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_01/Stack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +52,7 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/Users/xupeng/Documents/CPP_Primary/day_03/demo_04/main.cpp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -66,9 +61,9 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="demo_04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="demo_04" TARGET_NAME="demo_04" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="demo_04" RUN_TARGET_NAME="demo_04">
