@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Stack.h"
 
-//类的声明和定义分离
+//  类的声明和定义分离
 int main() {
     Stack s;
     s.Init(10);
