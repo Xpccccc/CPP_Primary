@@ -31,7 +31,7 @@ private:
     int _day = 1;
 };
 
-//三个默认构造函数
+// 三个默认构造函数
 int main() {
     Date d;
     d.Print();

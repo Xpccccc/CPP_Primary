@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "demo_04::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-demo_04-Debug-c7d2932b802a1f8f5db4.json",
+					"jsonFile" : "target-demo_04-Debug-d502104f19f1a22be4dd.json",
 					"name" : "demo_04",
 					"projectIndex" : 0
 				}
@@ -55,6 +55,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }
