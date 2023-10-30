@@ -27,7 +27,7 @@ private:
     Time _t;
 };
 
-//缺省成员变量
+// 缺省成员变量
 int main() {
     Date d;
     return 0;
