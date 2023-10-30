@@ -24,7 +24,7 @@ private:
     Time _t;
 };
 
-//析构函数的调用规则
+// 析构函数的调用规则
 int main() {
     Date d;
     // 在main方法中根本没有直接创建Time类的对象，为什么最后会调用Time类的析构函数？
