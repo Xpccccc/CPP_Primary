@@ -31,7 +31,7 @@ void Test() {
     cout << (d1 == d2) << endl;
 }
 
-//operator的引入 -- 运算符重载
+// operator的引入 -- 运算符重载
 int main() {
     Test();
     return 0;
