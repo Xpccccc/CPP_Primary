@@ -36,7 +36,7 @@ private:
     Time _t;
 };
 
-//赋值运算符的使用
+// 赋值运算符的使用
 int main() {
     Date d1;
     Date d2;
