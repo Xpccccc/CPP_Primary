@@ -36,7 +36,7 @@ void Test() {
     cout << d1.operator==(d2) << endl;//相当于d1.operator==(&d1,d2);
 }
 
-//==运算符重载成成员函数
+// ==运算符重载成成员函数
 int main() {
     Test();
     return 0;
