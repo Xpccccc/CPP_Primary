@@ -22,7 +22,7 @@ private:
     int _day;
 };
 
-//拷贝构造函数得传引用
+// 拷贝构造函数得传引用
 int main() {
     Date d1;
     Date d2(d1);
