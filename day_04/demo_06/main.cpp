@@ -44,7 +44,7 @@ void TestStack() {
     s.Push(2);
 }
 
-//栈的析构
+// 栈的析构
 int main(){
     TestStack();
     return 0;
