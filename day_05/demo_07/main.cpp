@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//赋值运算符重载的错误写法
+// 赋值运算符重载的错误写法
 class Date {
 public:
     Date(int year = 1900, int month = 1, int day = 1) {
