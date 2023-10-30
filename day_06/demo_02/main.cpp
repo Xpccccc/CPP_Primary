@@ -38,6 +38,7 @@ private:
 int main() {
     Date d1;
     Date d;
+
     d = ++d1;//d1.operator++(&d1);
     d = d1++;//d1.operator++(&d1,0);
     return 0;
