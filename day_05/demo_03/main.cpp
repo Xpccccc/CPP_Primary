@@ -27,7 +27,7 @@ Date Test(Date d) {
     return temp;//这里不调用拷贝构造函数可能是编译器优化了
 }
 
-//拷贝构造函数的使用
+// 拷贝构造函数的使用
 int main() {
     Date d1(2023, 10, 25);
     Test(d1);
