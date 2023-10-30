@@ -51,7 +51,7 @@ using namespace std;
 //    return 0;
 //}
 
-//解决办法   ---- 栈的拷贝构造函数的深拷贝
+//解决办法   --- 栈的拷贝构造函数的深拷贝
 typedef int DataType;
 
 class Stack1 {

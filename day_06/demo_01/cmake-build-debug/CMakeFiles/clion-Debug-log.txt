@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/xupeng/Documents/CPP_Primary/day_06/demo_01 -B /Users/xupeng/Documents/CPP_Primary/day_06/demo_01/cmake-build-debug
+/private/var/folders/2z/k15cvp3d4zd_5zz6qws11vl40000gn/T/AppTranslocation/8C2CCB4F-F681-4654-B74A-BE123A72257E/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/private/var/folders/2z/k15cvp3d4zd_5zz6qws11vl40000gn/T/AppTranslocation/8C2CCB4F-F681-4654-B74A-BE123A72257E/d/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/xupeng/Documents/CPP_Primary/day_06/demo_01 -B /Users/xupeng/Documents/CPP_Primary/day_06/demo_01/cmake-build-debug
 -- The C compiler identification is AppleClang 13.1.6.13160021
 -- The CXX compiler identification is AppleClang 13.1.6.13160021
 -- Detecting C compiler ABI info
@@ -11,6 +11,6 @@
 -- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done
--- Generating done
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
 -- Build files have been written to: /Users/xupeng/Documents/CPP_Primary/day_06/demo_01/cmake-build-debug
