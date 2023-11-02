@@ -15,7 +15,7 @@ set(CMAKE_C23_COMPILE_FEATURES "c_std_23")
 
 set(CMAKE_C_PLATFORM_ID "Darwin")
 set(CMAKE_C_SIMULATE_ID "")
-set(CMAKE_C_COMPILER_FRONTEND_VARIANT "")
+set(CMAKE_C_COMPILER_FRONTEND_VARIANT "GNU")
 set(CMAKE_C_SIMULATE_VERSION "")
 
 
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include;/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include;/Library/Developer/CommandLineTools/usr/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include;/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/System/Library/Frameworks")

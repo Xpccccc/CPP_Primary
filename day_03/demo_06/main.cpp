@@ -4,7 +4,7 @@ using namespace std;
 //this指针
 class Date {
 public:
-    void Init(int year, int month, int day) { //void Init(const Date* this, int year, int month, int day)
+    void Init(int year, int month, int day) { //void Init( Date* const this, int year, int month, int day)
         _year = year;
         _month = month;
         _day = day;
@@ -13,7 +13,7 @@ public:
         //this->_day = day;
     }
 
-    void Print() { // void Print(const Date* this)
+    void Print() { // void Print( Date* const this)  -- this不能改变，*this可以
         cout << _year << "-" << _month << "-" << _day << endl;
         //cout << this->_year << "-" << this->_month << "-" << this->_day << endl;
     }
