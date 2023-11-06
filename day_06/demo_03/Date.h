@@ -84,8 +84,15 @@ public:
     // 日期-日期 返回天数
     int operator-(const Date &d);
 
+    //流插入运算符重载
+    friend ostream& operator<<(ostream &out, Date &d);
+
+    //流提取运算符重载
+    friend istream& operator>>(istream &in, Date &d);
+
 private:
     int _year;
     int _month;
     int _day;
 };
+

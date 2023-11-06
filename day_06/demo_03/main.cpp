@@ -20,5 +20,8 @@ int main() {
 
     cout << (d1 - d2) << endl;
 
+    cin >> d;
+    cout << d;
+
     return 0;
 }

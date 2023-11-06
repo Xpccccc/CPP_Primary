@@ -197,3 +197,16 @@ int Date::operator-(const Date &d) {
     return count * flag;
 }
 
+//流插入运算符重载
+ostream& operator<<(ostream &out, Date &d) {
+    out << d._year << "-" << d._month << "-" << d._day << endl;
+    return out;
+}
+
+//流提取运算符重载
+istream& operator>>(istream &in, Date &d) {
+    in >> d._year;
+    in >> d._month;
+    in >> d._day;
+    return in;
+}
