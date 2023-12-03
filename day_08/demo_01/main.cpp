@@ -1,5 +1,6 @@
 
 // 把字符串转换成整数
+
 class Solution {
 public:
 
@@ -39,4 +40,5 @@ public:
         else
             return ret;
     }
+    
 };
