@@ -8,10 +8,10 @@
 		},
 		"paths" : 
 		{
-			"cmake" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake",
-			"cpack" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/cpack",
-			"ctest" : "/Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest",
-			"root" : "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26"
+			"cmake" : "/private/var/folders/2z/k15cvp3d4zd_5zz6qws11vl40000gn/T/AppTranslocation/6B47DA4F-3A2A-4247-8C2F-C98F7F6BA6FC/d/CLion.app/Contents/bin/cmake/mac/bin/cmake",
+			"cpack" : "/private/var/folders/2z/k15cvp3d4zd_5zz6qws11vl40000gn/T/AppTranslocation/6B47DA4F-3A2A-4247-8C2F-C98F7F6BA6FC/d/CLion.app/Contents/bin/cmake/mac/bin/cpack",
+			"ctest" : "/private/var/folders/2z/k15cvp3d4zd_5zz6qws11vl40000gn/T/AppTranslocation/6B47DA4F-3A2A-4247-8C2F-C98F7F6BA6FC/d/CLion.app/Contents/bin/cmake/mac/bin/ctest",
+			"root" : "/private/var/folders/2z/k15cvp3d4zd_5zz6qws11vl40000gn/T/AppTranslocation/6B47DA4F-3A2A-4247-8C2F-C98F7F6BA6FC/d/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26"
 		},
 		"version" : 
 		{
@@ -35,7 +35,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cache-v2-a4168da1d22793002a56.json",
+			"jsonFile" : "cache-v2-5406f3a8744ae42169be.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -44,7 +44,7 @@
 			}
 		},
 		{
-			"jsonFile" : "cmakeFiles-v1-04407d190cad02b6dd64.json",
+			"jsonFile" : "cmakeFiles-v1-3aa26d401536cdfd6afe.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
@@ -66,7 +66,7 @@
 	{
 		"cache-v2" : 
 		{
-			"jsonFile" : "cache-v2-a4168da1d22793002a56.json",
+			"jsonFile" : "cache-v2-5406f3a8744ae42169be.json",
 			"kind" : "cache",
 			"version" : 
 			{
@@ -76,7 +76,7 @@
 		},
 		"cmakeFiles-v1" : 
 		{
-			"jsonFile" : "cmakeFiles-v1-04407d190cad02b6dd64.json",
+			"jsonFile" : "cmakeFiles-v1-3aa26d401536cdfd6afe.json",
 			"kind" : "cmakeFiles",
 			"version" : 
 			{
