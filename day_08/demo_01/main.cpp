@@ -40,5 +40,5 @@ public:
         else
             return ret;
     }
-    
+
 };
