@@ -1,0 +1,3 @@
+/Users/xupeng/Documents/CPP_Primary/day_07/demo_38/cmake-build-debug/CMakeFiles/demo_38.dir
+/Users/xupeng/Documents/CPP_Primary/day_07/demo_38/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xupeng/Documents/CPP_Primary/day_07/demo_38/cmake-build-debug/CMakeFiles/rebuild_cache.dir
