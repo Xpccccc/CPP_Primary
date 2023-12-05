@@ -137,18 +137,13 @@ namespace xp {
         string substr(size_t pos = 0, size_t len = npos) const;
 
         //赋值
-        string &operator=(const string &str);
+        string &operator=(string str);
 
         string &operator=(const char *s);
 
         string &operator=(char c);
 
-        ~string() {
-            delete[] _str;
-            _str = nullptr;
-            _capacity = 0;
-            _size = 0;
-        }
+        ~string();
 
     private:
         char *_str;
@@ -184,6 +179,8 @@ namespace xp {
     void test_string10();
 
     void test_string11();
+
+    void test_string12();
 
 }
 

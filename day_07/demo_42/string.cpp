@@ -14,12 +14,26 @@ namespace xp {
         strcpy(_str, s);
     }
 
-    //拷贝构造函数
-    string::string(const string &str) {
-        _size = str._size;
-        _capacity = str._capacity;
-        _str = new char[_capacity + 1];
-        strcpy(_str, str._str);
+    //拷贝构造函数 --   传统写法
+//    string::string(const string &str) {
+//        _size = str._size;
+//        _capacity = str._capacity;
+//        _str = new char[_capacity + 1];
+//        strcpy(_str, str._str);
+//    }
+
+    //  现代写法
+    string::string(const string &str) : _str(nullptr), _size(0),
+                                        _capacity(0) {
+        //这里得使用初始化列表或者在private里得成员变量进行缺省，防止交换后tmp指向随机值，调用析构就会出错
+        string tmp(str._str);
+        swap(tmp);
+    }
+
+    void string::swap(string &str) {
+        std::swap(_str, str._str);
+        std::swap(_size, str._size);
+        std::swap(_capacity, str._capacity);
     }
 
     void string::reserve(size_t n) {
@@ -204,11 +218,6 @@ namespace xp {
         return *this;
     }
 
-    void string::swap(string &str) {
-        std::swap(_str, str._str);
-        std::swap(_size, str._size);
-        std::swap(_capacity, str._capacity);
-    }
 
     size_t string::find(const string &str, size_t pos) const {
         assert(pos < _size);
@@ -250,13 +259,21 @@ namespace xp {
         return str;
     }
 
-    string &string::operator=(const string &str) {
-        if (this != &str) {
-            reserve(str._capacity);
-            strcpy(_str, str._str);
-            _size = str._size;
-        }
+    // 传统写法
+//    string &string::operator=(const string &str) {
+//        if (this != &str) {
+//            reserve(str._capacity);
+//            strcpy(_str, str._str);
+//            _size = str._size;
+//        }
+//
+//        return *this;
+//    }
 
+    //  现代写法
+    string &string::operator=(string str) {
+        //这里不会改变赋值的值，这里str只是临时拷贝
+        swap(str);
         return *this;
     }
 
@@ -274,6 +291,7 @@ namespace xp {
         _size = 1;
         return *this;
     }
+
 
     ostream &operator<<(ostream &out, string &str) {
         for (auto e: str) {
@@ -302,6 +320,13 @@ namespace xp {
             str += buffer;
         }
         return in;
+    }
+
+    string::~string() {
+        delete[] _str;
+        _str = nullptr;
+        _capacity = 0;
+        _size = 0;
     }
 
     void test_string1() {
@@ -432,6 +457,17 @@ namespace xp {
         string s;
         cin >> s;
         cout << s << endl;
+    }
+
+    void test_string12() {
+        string s1("111");
+        string s2(s1);
+        cout << s1 << endl;
+        cout << s2 << endl;
+
+        string s3;
+        s3 = s2;
+        cout << s3 << endl;
     }
 
 }
