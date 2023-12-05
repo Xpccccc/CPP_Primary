@@ -26,6 +26,7 @@ namespace xp {
     string::string(const string &str) : _str(nullptr), _size(0),
                                         _capacity(0) {
         //这里得使用初始化列表或者在private里得成员变量进行缺省，防止交换后tmp指向随机值，调用析构就会出错
+        //析构函数中使用 delete[] _str;，但在构造函数中 _str 的初始化是 new char[1]，这可能导致 delete[] 不匹配。为了避免这个问题，可以将构造函数中的 _str 初始化为 nullptr
         string tmp(str._str);
         swap(tmp);
     }
