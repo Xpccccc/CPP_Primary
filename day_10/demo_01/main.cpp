@@ -7,6 +7,8 @@ int main() {
 //    xp::test_vector2();
 //    xp::test_vector3();
 //    xp::test_vector4();
-    xp::test_vector5();
+//    xp::test_vector5();
+//    xp::test_vector6();
+    xp::test_vector7();
     return 0;
 }

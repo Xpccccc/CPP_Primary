@@ -4,6 +4,7 @@
 
 #include <cstdio>
 #include <cstring>
+#include <list>
 
 using namespace std;
 
@@ -34,6 +35,24 @@ namespace xp {
             for (const auto &e: v) {
                 push_back(e);
             }
+        }
+
+        template<class InputIterator>
+        //构造迭代器区间
+        vector(InputIterator first, InputIterator last) {
+            while (first != last) {
+                push_back(*first);
+                ++first;
+            }
+        }
+
+        vector(size_t n, const T &val = T()) {
+            resize(n, val);
+        }
+
+        //防止和上面迭代器区间搞混
+        vector(int n, const T &val = T()) {
+            resize(n, val);
         }
 
         //赋值 ,这里vector<T> v在传值的时候就已经有拷贝构造了
@@ -70,7 +89,13 @@ namespace xp {
                 iterator tmp = new T[n];
                 //start不为空，在复制完内容需要释放空间
                 if (_start) {
-                    memcpy(tmp, _start, old_size * sizeof(T));
+//                    //对于自定义类型，在进行delete[] _start 之后（自定义类型里面存在指针开辟空间问题的时候），会把原来的_start里面内容进行析构和空间释放
+//                    memcpy(tmp, _start, old_size * sizeof(T));
+
+                    //  解决方案，进行深拷贝
+                    for (size_t i = 0; i < old_size; ++i) {
+                        tmp[i] = _start[i];
+                    }
                     delete[] _start;
                 }
                 _start = tmp;
@@ -116,7 +141,12 @@ namespace xp {
                 reserve(newCapacity);
                 pos = _start + len;//防止增容量后，pos位置还是之前被释放的空间
             }
-            memmove(pos + 1, pos, sizeof(T) * (_finish - pos));
+            //memmove(pos + 1, pos, sizeof(T) * (_finish - pos)); //浅拷贝，扩容可能存在迭代器失效问题
+            iterator end = _finish - 1;
+            while (pos <= end) {
+                *(end + 1) = *end;
+                --end;
+            }
             *pos = val;
             ++_finish;
         }
@@ -229,5 +259,67 @@ namespace xp {
         v.push_back("p");
         cout << v[1] << endl;
     }
+
+    void test_vector6() {
+        vector<string> v;
+        v.push_back("w");
+        v.push_back("s");
+        v.push_back("x");
+        v.push_back("p");
+        v.push_back("p");
+        v.push_back("p");
+        v.push_back("p");
+        v.push_back("p");
+        v.push_back("psdf");
+        v.push_back("pdsf");
+        v.push_back("pfd");
+        v.push_back("pdsf");
+        v.insert(v.begin(), "sdas");
+        for (auto e: v) {
+            cout << e << " ";
+        }
+        cout << endl;
+    }
+
+    void test_vector7() {
+        vector<string> v;
+        v.push_back("w");
+        v.push_back("s");
+        v.push_back("x");
+        v.push_back("p");
+        v.push_back("p");
+        v.push_back("p");
+        vector<string> v2(v.begin(), v.end());
+        for (auto e: v2) {
+            cout << e << " ";
+        }
+        cout << endl;
+
+        int a[] = {1111, 222, 222, 3};
+        vector<int> v3(a, a + 4);
+        for (auto e: v3) {
+            cout << e << " ";
+        }
+        cout << endl;
+
+        list<string> lt;
+        lt.push_back("hjakds");
+        lt.push_back("wq");
+        lt.push_back("qw");
+        lt.push_back("w");
+
+        vector<string> v4(lt.begin(), lt.end());
+        for (auto e: v4) {
+            cout << e << " ";
+        }
+        cout << endl;
+
+        vector<int> v5(5, 5);
+        for (auto e: v5) {
+            cout << e << " ";
+        }
+        cout << endl;
+    }
+
 
 }
