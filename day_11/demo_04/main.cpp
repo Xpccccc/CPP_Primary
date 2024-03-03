@@ -259,13 +259,29 @@ void test_list7() {
 
 }
 
+// 迭代器失效问题
+void TestListIterator1()
+{
+    int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
+    list<int> l(array, array+sizeof(array)/sizeof(array[0]));
+    auto it = l.begin();
+    while (it != l.end())
+    {
+        // erase()函数执行后，it所指向的节点已被删除，因此it无效，在下一次使用it时，必须先给其赋值
+//        l.erase(it);
+        it = l.erase(it);
+        ++it;// 每次跳一个删除
+    }
+}
+
 // list的使用
 int main() {
 //    test_list1();
 //    test_list2();
-    test_list7();
+//    test_list7();
 //    test_list6();
 //    test_list5();
 //    test_list4();
+    TestListIterator1();
     return 0;
 }
