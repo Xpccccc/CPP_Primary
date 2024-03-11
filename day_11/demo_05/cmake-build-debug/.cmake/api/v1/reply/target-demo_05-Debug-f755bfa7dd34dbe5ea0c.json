@@ -89,7 +89,8 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -104,6 +105,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "list.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ReverseIterator.h",
 			"sourceGroupIndex" : 1
 		}
 	],

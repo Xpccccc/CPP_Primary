@@ -7,7 +7,7 @@
 
 #endif //DEMO_05_LIST_H
 
-
+#include "ReverseIterator.h"
 #include <iostream>
 
 using namespace std;
@@ -143,6 +143,9 @@ namespace xp {
         typedef __list_iterator<T, T &, T *> iterator;
         typedef __list_iterator<T, const T &, const T *> const_iterator;
 
+        typedef ReverseIterator<iterator, const T &, const T *> reverse_iterator;
+        typedef ReverseIterator<const_iterator, const T &, const T *> const_reverse_iterator;
+
         //构造函数
         list() {
             //创建带头节点的双向循环链表
@@ -189,6 +192,22 @@ namespace xp {
 
         const_iterator end() const {
             return _head;
+        }
+
+        reverse_iterator rbegin() {
+            return end();
+        }
+
+        reverse_iterator rend() {
+            return begin();
+        }
+
+        const_reverse_iterator rbegin() const {
+            return end();
+        }
+
+        const_reverse_iterator rend() const {
+            return begin();
         }
 
         void push_back(const T &val) {
@@ -367,5 +386,21 @@ namespace xp {
             cout << it.operator->()->_a1 << " " << it.operator->()->_a2 << endl;//原型，即运算符重载->省略了一个->
             ++it;
         }
+    }
+
+    void test_list5() {
+        list<int> lt;
+        lt.push_back(1);
+        lt.push_back(2);
+        lt.push_back(3);
+        lt.push_back(4);
+        lt.push_back(5);
+
+        list<int>::reverse_iterator rit = lt.rbegin();
+        while (rit != lt.rend()) {
+            cout << *rit << " ";
+            ++rit;
+        }
+        cout << endl;
     }
 }
